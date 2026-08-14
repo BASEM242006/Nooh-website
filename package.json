@@ -1,0 +1,18 @@
+{
+  "name": "nooh-website",
+  "version": "1.0.0",
+  "description": "NOOH - Premium Frozen Fruits & Vegetables Export Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "cmd /c start index.html",
+    "open": "cmd /c start index.html"
+  },
+  "keywords": [
+    "nooh",
+    "frozen-fruits",
+    "agriculture",
+    "export"
+  ],
+  "author": "NOOH Export",
+  "license": "ISC"
+}

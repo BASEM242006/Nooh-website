@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOOH — Premium Frozen Fruits & Vegetables Export</title>
+  <meta name="description" content="NOOH specializes in producing and exporting world-class IQF frozen fruits, vegetables, and custom agricultural mixes. Harvesting peak freshness for global distribution." />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="NOOH — Premium Frozen Food Export" />
+  <meta property="og:description" content="Global supplier of Individually Quick Frozen (IQF) fruits & vegetables. Peak freshness, strict quality standards." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Favicon / Touch Icons -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>" />
+</head>
+<body>
+
+  <!-- =============================================
+       NAVBAR
+       ============================================= -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="NOOH Home">
+        <div class="nav-logo-icon">🌿</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">NOOH</span>
+          <span class="nav-logo-sub">AGRICULTURE EXPORT</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About Us</a>
+        
+        <div class="nav-item-has-dropdown">
+          <a href="#products" class="nav-link" data-section="products">
+            Products ▾
+          </a>
+          <div class="nav-dropdown">
+            <a href="#products" class="dropdown-link" onclick="filterProductsViaNav('fruits')">Frozen Fruits</a>
+            <a href="#products" class="dropdown-link" onclick="filterProductsViaNav('veg')">Frozen Vegetables</a>
+            <a href="#products" class="dropdown-link" onclick="filterProductsViaNav('fruit-mix')">Fruit Mix</a>
+            <a href="#products" class="dropdown-link" onclick="filterProductsViaNav('veg-mix')">Vegetable Mix</a>
+          </div>
+        </div>
+
+        <a href="#who-we-serve" class="nav-link" data-section="who-we-serve">Who We Serve</a>
+        <a href="#why-us" class="nav-link" data-section="why-us">Why Work With Us</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact Us</a>
+      </nav>
+
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+
+      <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile Navigation">
+    <a href="#hero" class="mobile-nav-link">Home</a>
+    <a href="#about" class="mobile-nav-link">About Us</a>
+    <a href="#products" class="mobile-nav-link">Products</a>
+    <div class="mobile-dropdown">
+      <a href="#products" class="mobile-nav-link" onclick="filterProductsViaNav('fruits')">↳ Frozen Fruits</a>
+      <a href="#products" class="mobile-nav-link" onclick="filterProductsViaNav('veg')">↳ Frozen Vegetables</a>
+      <a href="#products" class="mobile-nav-link" onclick="filterProductsViaNav('fruit-mix')">↳ Fruit Mix</a>
+      <a href="#products" class="mobile-nav-link" onclick="filterProductsViaNav('veg-mix')">↳ Vegetable Mix</a>
+    </div>
+    <a href="#who-we-serve" class="mobile-nav-link">Who We Serve</a>
+    <a href="#why-us" class="mobile-nav-link">Why Work With Us</a>
+    <a href="#contact" class="mobile-nav-link">Contact Us</a>
+    <a href="#contact" class="mobile-nav-cta">Get a Custom Quote</a>
+  </nav>
+
+  <!-- =============================================
+       HERO SECTION
+       ============================================= -->
+  <section id="hero" class="hero">
+    <img src="images/hero_bg.png" alt="NOOH Agricultural Fruit Harvest Field at Sunrise" class="hero-bg" />
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>Leading International Produce Exporter</span>
+      </div>
+
+      <h1 class="hero-title">
+        Nature's Purest Harvest, <span class="highlight">Frozen at Peak Freshness</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        NOOH specializes in growing, quick-freezing, and exporting premium IQF fruits and vegetables. We bring field-fresh nutrition and natural flavor from audited farms directly to international markets worldwide.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">
+          <span>Explore Our Products</span>
+          <span class="btn-icon">➔</span>
+        </a>
+        <a href="#contact" class="btn-outline-white">
+          <span>Contact Us</span>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">40<span>+</span></span>
+          <span class="hero-stat-label">Export Countries</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">100<span>%</span></span>
+          <span class="hero-stat-label">IQF Quality Tested</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">30K<span>+</span></span>
+          <span class="hero-stat-label">Tons Exported Annually</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       MARQUEE TICKER
+       ============================================= -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="dot">★</span> IQF Frozen Strawberries</div>
+      <div class="marquee-item"><span class="dot">★</span> Premium Mango Dices</div>
+      <div class="marquee-item"><span class="dot">★</span> ISO 22000 & BRCGS Certified</div>
+      <div class="marquee-item"><span class="dot">★</span> Direct Farm-to-Freezer</div>
+      <div class="marquee-item"><span class="dot">★</span> 100% Natural & Preservative-Free</div>
+      <div class="marquee-item"><span class="dot">★</span> IQF Pomegranate Arils</div>
+      <div class="marquee-item"><span class="dot">★</span> Cold-Chain Global Logistics</div>
+      <div class="marquee-item"><span class="dot">★</span> Non-GMO Sweet Corn</div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       ABOUT US SECTION
+       ============================================= -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <img src="images/about_facility.png" alt="NOOH Modern Fruit Processing Facility" class="about-main-img" />
+          <div class="about-badge-card">
+            <div class="about-badge-icon">🏭</div>
+            <div>
+              <div class="about-badge-title">BRCGS & ISO Certified</div>
+              <div class="about-badge-sub">State-of-the-Art Processing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal reveal-delay-2">
+          <span class="section-tag">About NOOH</span>
+          <h2 class="section-heading">
+            Specializing in Premium Fruit & <span>Vegetable Processing</span>
+          </h2>
+          <p class="about-desc">
+            NOOH is an international food export enterprise dedicated to supplying high-grade fruits and vegetables to global markets. Operating with state-of-the-art IQF (Individually Quick Frozen) technology, we process crops at maximum ripeness to preserve cellular integrity, natural sweetness, and essential nutrients.
+          </p>
+
+          <div class="about-pillars">
+            <div class="about-pillar">
+              <div class="pillar-icon">🌱</div>
+              <div>
+                <h3 class="pillar-title">Premium Raw Produce</h3>
+                <p class="pillar-text">Sourced directly from our strictly monitored agricultural partners under sustainable farming guidelines.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar">
+              <div class="pillar-icon">⚙️</div>
+              <div>
+                <h3 class="pillar-title">Modern Processing Facility</h3>
+                <p class="pillar-text">Automated optical sorting, laser inspection, and cryogenic blast freezing lines operating under sterile conditions.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar">
+              <div class="pillar-icon">🛡️</div>
+              <div>
+                <h3 class="pillar-title">Quality & Safety First</h3>
+                <p class="pillar-text">Complete compliance with international food safety certifications including HACCP, ISO 22000, and GlobalGAP.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#why-us" class="btn-green">
+            <span>Learn More About Us</span>
+            <span>➔</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       WHY WORK WITH US SECTION
+       ============================================= -->
+  <section id="why-us" class="why-us">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Why Work With Us</span>
+        <h2 class="section-heading">Built on Trust, <span>Quality & Precision</span></h2>
+        <p class="section-subheading">
+          We partner with leading global importers, supermarket chains, and food manufacturers by providing guaranteed quality and reliable supply chains.
+        </p>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="why-us-cards reveal reveal-delay-2">
+          <div class="why-card">
+            <div class="why-icon">✨</div>
+            <div>
+              <h3 class="why-title">Uncompromised Quality</h3>
+              <p class="why-text">Harvested at peak maturity and frozen within hours to preserve full flavor, vibrant color, and texture.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">🔍</div>
+            <div>
+              <h3 class="why-title">Full Supply Chain Control</h3>
+              <p class="why-text">End-to-end oversight from soil testing and seed cultivation to final temperature-controlled shipping containers.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">💡</div>
+            <div>
+              <h3 class="why-title">Continuous Innovation</h3>
+              <p class="why-text">Advanced IQF freezing tech and custom slice/dice cuts tailored precisely to client specifications.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">📦</div>
+            <div>
+              <h3 class="why-title">100% Traceability</h3>
+              <p class="why-text">Every shipment is batch-tracked from the individual farm field to the customer’s warehouse.</p>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">🤝</div>
+            <div>
+              <h3 class="why-title">Customer Satisfaction</h3>
+              <p class="why-text">Dedicated export managers, flexible packaging choices, and transparent, responsive communication.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-image-col reveal reveal-delay-3">
+          <img src="images/about_facility.png" alt="NOOH High Tech Cold Chain Packaging" class="why-main-img" />
+          <div class="why-stat-card card-tl">
+            <span class="stat-number">99.8%</span>
+            <span class="stat-label">On-Time Delivery</span>
+          </div>
+          <div class="why-stat-card card-br">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Cold Chain Tracking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       PRODUCTS SECTION
+       ============================================= -->
+  <section id="products" class="products">
+    <div class="container">
+      <div class="text-center products-intro reveal">
+        <span class="section-tag">Our Products</span>
+        <h2 class="section-heading">Explore Our <span>Premium Frozen Range</span></h2>
+        <p class="section-subheading">
+          Discover our wide selection of Individually Quick Frozen (IQF) fruits, vegetables, and gourmet blends processed under strict quality standards.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="product-filters-wrap reveal">
+        <button class="product-filter-btn active" data-filter="all">All Products</button>
+        <button class="product-filter-btn" data-filter="fruits">Frozen Fruits</button>
+        <button class="product-filter-btn" data-filter="veg">Frozen Vegetables</button>
+        <button class="product-filter-btn" data-filter="fruit-mix">Fruit Mix</button>
+        <button class="product-filter-btn" data-filter="veg-mix">Vegetable Mix</button>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="products-grid">
+        <!-- 1. Strawberry -->
+        <article class="product-card reveal" data-category="fruits">
+          <div class="product-img-wrap">
+            <img src="images/product_strawberry.png" alt="NOOH Frozen Strawberry" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Frozen Fruits</span>
+            <span class="product-tag">Grade A</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Strawberry</h3>
+            <p class="product-desc">Naturally sweet, deep-red strawberries picked at peak flavor maturity and individually quick frozen.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Whole / Sliced / Diced</span>
+              <span class="spec-chip">Brix 7.0%+</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> NOOH Farms</div>
+              <button class="product-cta" onclick="openProductModal('strawberry')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Blueberry -->
+        <article class="product-card reveal reveal-delay-1" data-category="fruits">
+          <div class="product-img-wrap">
+            <img src="images/product_blueberry.png" alt="NOOH Frozen Blueberry" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Frozen Fruits</span>
+            <span class="product-tag">High Antioxidant</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Blueberry</h3>
+            <p class="product-desc">Plump, antioxidant-rich blueberries flash-frozen to retain natural bloom, juice, and crisp bite.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Wild & Cultivated</span>
+              <span class="spec-chip">IQF Whole</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> Certified Farms</div>
+              <button class="product-cta" onclick="openProductModal('blueberry')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Mango -->
+        <article class="product-card reveal reveal-delay-2" data-category="fruits">
+          <div class="product-img-wrap">
+            <img src="images/product_mango.png" alt="NOOH Frozen Mango Dices" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Frozen Fruits</span>
+            <span class="product-tag">Tropical Sweet</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Mango</h3>
+            <p class="product-desc">Golden, fiber-free mango dices and chunks packed with tropical aroma and rich Vitamin A sweetness.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Chunks / Dices</span>
+              <span class="spec-chip">Brix 13.0%+</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> Selected Crops</div>
+              <button class="product-cta" onclick="openProductModal('mango')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Pomegranate -->
+        <article class="product-card reveal reveal-delay-3" data-category="fruits">
+          <div class="product-img-wrap">
+            <img src="images/product_pomegranate.png" alt="NOOH Frozen Pomegranate Arils" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Frozen Fruits</span>
+            <span class="product-tag">Ruby Red</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Pomegranate</h3>
+            <p class="product-desc">Vibrant ruby pomegranate seeds extracted cleanly, offering a crisp texture and tart-sweet balance.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Whole Arils</span>
+              <span class="spec-chip">99.5% Purity</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> NOOH Orchards</div>
+              <button class="product-cta" onclick="openProductModal('pomegranate')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Grapes -->
+        <article class="product-card reveal" data-category="fruits">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1596368708356-6e1e1025ee72?auto=format&fit=crop&w=800&q=80" alt="NOOH Frozen Grapes" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Frozen Fruits</span>
+            <span class="product-tag">Seedless</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Grapes</h3>
+            <p class="product-desc">Crisp, naturally sweet seedless green and red grapes harvested and quick frozen for food production.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Green & Red</span>
+              <span class="spec-chip">Stemless IQF</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> Sunlit Vineyards</div>
+              <button class="product-cta" onclick="openProductModal('grapes')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Sweet Corn -->
+        <article class="product-card reveal reveal-delay-1" data-category="veg">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=800&q=80" alt="NOOH Frozen Sweet Corn" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Frozen Vegetables</span>
+            <span class="product-tag">Non-GMO</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Sweet Corn</h3>
+            <p class="product-desc">Tender golden sweet corn kernels steam-blanched and flash frozen to lock in crunch and natural sugar.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Whole Kernels</span>
+              <span class="spec-chip">Sweetness 12%+</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> Certified Farms</div>
+              <button class="product-cta" onclick="openProductModal('sweetcorn')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Mixed Fruits -->
+        <article class="product-card reveal reveal-delay-2" data-category="fruit-mix">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=800&q=80" alt="NOOH Mixed Fruits Blend" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Fruit Mix</span>
+            <span class="product-tag">Gourmet Blend</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Mixed Fruits</h3>
+            <p class="product-desc">A rich blend of IQF strawberries, mango cubes, sliced peaches, and blueberries for smoothies and baking.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Custom Ratios</span>
+              <span class="spec-chip">Multi-Berry Mix</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> NOOH Recipe</div>
+              <button class="product-cta" onclick="openProductModal('mixedfruits')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8. Mixed Vegetables -->
+        <article class="product-card reveal reveal-delay-3" data-category="veg-mix">
+          <div class="product-img-wrap">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="NOOH Mixed Vegetables" class="product-img" />
+            <div class="product-overlay"></div>
+            <span class="product-category">Vegetable Mix</span>
+            <span class="product-tag">4-Way Mix</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Mixed Vegetables</h3>
+            <p class="product-desc">Nutritious garden peas, sweet corn, diced carrots, and broccoli florets blanched for ready-to-cook convenience.</p>
+            <div class="product-specs">
+              <span class="spec-chip">Peas, Corn, Carrots</span>
+              <span class="spec-chip">Foodservice Ready</span>
+            </div>
+            <div class="product-footer">
+              <div class="product-origin"><span>Origin:</span> NOOH Selection</div>
+              <button class="product-cta" onclick="openProductModal('mixedveg')">View Details ➔</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       WHO WE SERVE SECTION
+       ============================================= -->
+  <section id="who-we-serve" class="about" style="background: var(--white);">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Who We Serve</span>
+        <h2 class="section-heading">Serving Global <span>Food Industries</span></h2>
+        <p class="section-subheading">
+          NOOH provides customized packaging, cut specifications, and continuous bulk supply tailored to three main commercial sectors.
+        </p>
+      </div>
+
+      <div class="products-grid" style="margin-top: 56px;">
+        <!-- 1. Retail -->
+        <article class="product-card reveal">
+          <div class="product-img-wrap" style="aspect-ratio: 16/10;">
+            <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=800&q=80" alt="Retail Supermarket Frozen Produce" class="product-img" />
+            <div class="product-overlay"></div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name" style="font-size: 1.4rem;">1. Retail & Supermarkets</h3>
+            <p class="product-desc">Private-label and branded retail packaging in stand-up zipper pouches (300g to 2.5kg) designed for eye-catching freezer shelf display.</p>
+            <a href="#contact" class="btn-green" style="width: 100%; justify-content: center; margin-top: 12px;">Learn More</a>
+          </div>
+        </article>
+
+        <!-- 2. Food Service -->
+        <article class="product-card reveal reveal-delay-1">
+          <div class="product-img-wrap" style="aspect-ratio: 16/10;">
+            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80" alt="Food Service HORECA Kitchen" class="product-img" />
+            <div class="product-overlay"></div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name" style="font-size: 1.4rem;">2. Food Service & HORECA</h3>
+            <p class="product-desc">Consistent quality, year-round supply, and bulk bag packaging (2.5kg to 10kg) for hotels, restaurants, bakeries, and smoothie chains.</p>
+            <a href="#contact" class="btn-green" style="width: 100%; justify-content: center; margin-top: 12px;">Learn More</a>
+          </div>
+        </article>
+
+        <!-- 3. Food Industry -->
+        <article class="product-card reveal reveal-delay-2">
+          <div class="product-img-wrap" style="aspect-ratio: 16/10;">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Industrial Food Processing Factory" class="product-img" />
+            <div class="product-overlay"></div>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name" style="font-size: 1.4rem;">3. Food Industry & Manufacturers</h3>
+            <p class="product-desc">Bulk raw materials shipped in octabins, industrial cartons, or drums for jam producers, dairy manufacturers, and beverage plants.</p>
+            <a href="#contact" class="btn-green" style="width: 100%; justify-content: center; margin-top: 12px;">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FRESH FROZEN STORYTELLING SECTION
+       ============================================= -->
+  <section class="fresh-frozen">
+    <div class="container">
+      <div class="fresh-frozen-inner">
+        <div class="ff-image-col reveal">
+          <img src="images/about_facility.png" alt="NOOH Quick Freezing Process" class="ff-main-img" />
+          <div class="ff-floater">
+            <div class="ff-floater-title">FLASH FREEZING PROCESS</div>
+            <div class="ff-temp">-40<span>°C</span></div>
+            <div class="ff-temp-label">Ultra-Low Cryogenic IQF</div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <span class="section-tag">The Fresh Frozen Advantage</span>
+          <h2 class="section-heading">Freshly Harvested, <span>Immediately Frozen</span></h2>
+          <p class="about-desc">
+            At NOOH, our products are processed within hours of being picked from the field. Rapid IQF freezing prevents large ice crystal formation, locking in cellular structure, vivid natural color, and up to 98% of natural vitamins.
+          </p>
+
+          <div class="ff-features">
+            <div class="ff-feature">
+              <div class="ff-icon">⏱️</div>
+              <div>
+                <h3 class="ff-title">Rapid Harvest-to-Freezer Window</h3>
+                <p class="ff-text">Minimizing time between picking and processing preserves peak sucrose and vitamin levels.</p>
+              </div>
+            </div>
+
+            <div class="ff-feature">
+              <div class="ff-icon">❄️</div>
+              <div>
+                <h3 class="ff-title">Zero Ice Crystal Damage</h3>
+                <p class="ff-text">Fluidized bed freezing ensures individual pieces remain loose, non-clumped, and easy to portion.</p>
+              </div>
+            </div>
+
+            <div class="ff-feature">
+              <div class="ff-icon">🥗</div>
+              <div>
+                <h3 class="ff-title">Pure & Natural</h3>
+                <p class="ff-text">100% natural fruit and vegetable produce with zero added sugars, artificial preservatives, or colors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       QUALITY & SAFETY CERTIFICATIONS
+       ============================================= -->
+  <section class="certifications">
+    <div class="container">
+      <div class="cert-inner text-center">
+        <div class="reveal">
+          <span class="section-tag">Quality Standards</span>
+          <h2 class="section-heading">Certified for <span>Global Compliance</span></h2>
+          <p class="section-subheading">We maintain strict adherence to international quality management and food safety systems.</p>
+        </div>
+
+        <div class="cert-badges reveal reveal-delay-1">
+          <div class="cert-badge">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <div class="cert-name">ISO 22000</div>
+              <div class="cert-body">Food Safety Management</div>
+            </div>
+          </div>
+
+          <div class="cert-badge">
+            <div class="cert-icon">🛡️</div>
+            <div>
+              <div class="cert-name">BRCGS Grade A</div>
+              <div class="cert-body">Global Standard Audited</div>
+            </div>
+          </div>
+
+          <div class="cert-badge">
+            <div class="cert-icon">📋</div>
+            <div>
+              <div class="cert-name">HACCP Certified</div>
+              <div class="cert-body">Hazard Analysis Critical Point</div>
+            </div>
+          </div>
+
+          <div class="cert-badge">
+            <div class="cert-icon">🚜</div>
+            <div>
+              <div class="cert-name">GlobalGAP</div>
+              <div class="cert-body">Good Agricultural Practice</div>
+            </div>
+          </div>
+
+          <div class="cert-badge">
+            <div class="cert-icon">🌙</div>
+            <div>
+              <div class="cert-name">Halal Certified</div>
+              <div class="cert-body">100% Compliant Production</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CTA BANNER
+       ============================================= -->
+  <section class="journey" style="padding: 80px 0;">
+    <div class="container text-center reveal">
+      <span class="section-tag">Partner With NOOH</span>
+      <h2 class="section-heading" style="color: white; font-size: clamp(2.2rem, 5vw, 3.5rem);">
+        Bring the Freshness of NOOH to Your Business
+      </h2>
+      <p class="section-subheading" style="color: rgba(255,255,255,.8); margin-bottom: 36px;">
+        Request a customized export quotation or sample shipment for your retail, distribution, or industrial supply needs.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#contact" class="btn-primary" style="padding: 16px 36px; font-size: 1rem;">
+          <span>Contact Us Today</span>
+          <span>➔</span>
+        </a>
+        <a href="#products" class="btn-outline-white" style="padding: 16px 32px; font-size: 1rem;">
+          <span>Explore Products</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CONTACT SECTION
+       ============================================= -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-heading">Contact Our <span>Export Team</span></h2>
+        <p class="section-subheading">
+          Have a product inquiry or need custom packaging specs? Our team is available 24/7 to assist international buyers.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal">
+          <h3 class="contact-form-title">Send Us a Message</h3>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" class="form-input" placeholder="e.g. Alexander Vance" required />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Business Email *</label>
+                <input type="email" id="email" class="form-input" placeholder="name@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone / WhatsApp</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="company" class="form-label">Company Name *</label>
+                <input type="text" id="company" class="form-input" placeholder="Global Foods Ltd." required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="product-interest" class="form-label">Product Interest</label>
+              <select id="product-interest" class="form-select">
+                <option value="strawberry">IQF Strawberry</option>
+                <option value="blueberry">IQF Blueberry</option>
+                <option value="mango">IQF Mango Dices / Chunks</option>
+                <option value="pomegranate">IQF Pomegranate Arils</option>
+                <option value="sweetcorn">IQF Sweet Corn</option>
+                <option value="mixes">Fruit or Vegetable Mixes</option>
+                <option value="custom">Custom Commercial Spec / Bulk</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Inquiry Details *</label>
+              <textarea id="message" class="form-textarea" placeholder="Please mention target product, volume (metric tons), destination port, and packaging requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              <span>Send Export Inquiry ➔</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info & Interactive Map -->
+        <div class="contact-info reveal reveal-delay-2">
+          <div>
+            <h3 class="contact-info-title">Headquarters & Export Office</h3>
+            <p class="contact-info-text">
+              Connect directly with our international export department for specification sheets, FOB/CIF pricing quotes, and sample requests.
+            </p>
+          </div>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">📞</div>
+              <div>
+                <div class="contact-card-label">Direct Phone & WhatsApp</div>
+                <div class="contact-card-value"><a href="tel:+201090283194" style="color:inherit;">+20 109 028 3194</a></div>
+                <div class="contact-card-sub"><a href="https://wa.me/201090283194" target="_blank" style="color:var(--green-medium); font-weight:600;">💬 Chat on WhatsApp (+20 109 028 3194)</a></div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">✉️</div>
+              <div>
+                <div class="contact-card-label">Official Export Email</div>
+                <div class="contact-card-value">export@nooh-produce.com</div>
+                <div class="contact-card-sub">info@nooh-produce.com</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div>
+                <div class="contact-card-label">Head Office Location</div>
+                <div class="contact-card-value">NOOH Agriculture & Food Export Park</div>
+                <div class="contact-card-sub">International Trade & Port Sector</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card-icon">⏰</div>
+              <div>
+                <div class="contact-card-label">Business Hours</div>
+                <div class="contact-card-value">Monday – Friday: 08:00 – 18:00 (GMT+2)</div>
+                <div class="contact-card-sub">24/7 Logistics Support Center</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Global Export Map Container -->
+          <div class="interactive-map-frame">
+            <svg class="map-svg-overlay" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M150 120 Q 200 80, 250 140 T 350 120" stroke="#155d32" stroke-width="2" stroke-dasharray="4 4"/>
+              <path d="M250 140 Q 400 100, 550 160 T 700 120" stroke="#e8960a" stroke-width="2" stroke-dasharray="4 4"/>
+              <text x="360" y="210" fill="#ffffff" font-size="14" font-family="sans-serif" font-weight="bold" opacity="0.6">GLOBAL EXPORT NETWORK</text>
+            </svg>
+            <div class="map-pins-container">
+              <div class="map-pin-pulse" style="top: 35%; left: 32%;" title="NOOH Processing Plant & HQ"></div>
+              <div class="map-pin-pulse" style="top: 25%; left: 55%;" title="European Distribution Hub"></div>
+              <div class="map-pin-pulse" style="top: 40%; left: 75%;" title="Asia-Pacific Port"></div>
+              <div class="map-pin-pulse" style="top: 30%; left: 20%;" title="Americas Logistics Center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#hero" class="nav-logo">
+            <div class="nav-logo-icon">🌿</div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">NOOH</span>
+              <span class="nav-logo-sub">AGRICULTURE EXPORT</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            NOOH is a premier international agricultural producer and exporter specializing in high-grade IQF frozen fruits, vegetables, and tailored produce solutions for world markets.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+            <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+            <a href="https://wa.me/201090283194" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">➔ Home</a></li>
+            <li><a href="#about" class="footer-link">➔ About NOOH</a></li>
+            <li><a href="#why-us" class="footer-link">➔ Why Work With Us</a></li>
+            <li><a href="#who-we-serve" class="footer-link">➔ Who We Serve</a></li>
+            <li><a href="#contact" class="footer-link">➔ Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#products" class="footer-link" onclick="filterProductsViaNav('fruits')">➔ Frozen Fruits</a></li>
+            <li><a href="#products" class="footer-link" onclick="filterProductsViaNav('veg')">➔ Frozen Vegetables</a></li>
+            <li><a href="#products" class="footer-link" onclick="filterProductsViaNav('fruit-mix')">➔ Fruit Mixes</a></li>
+            <li><a href="#products" class="footer-link" onclick="filterProductsViaNav('veg-mix')">➔ Vegetable Mixes</a></li>
+            <li><a href="#products" class="footer-link">➔ Custom IQF Cuts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Global Contact</h4>
+          <ul class="footer-links">
+            <li class="footer-link">📍 Export Industrial Zone</li>
+            <li class="footer-link">📞 <a href="tel:+201090283194" style="color:inherit;">+20 109 028 3194</a></li>
+            <li class="footer-link">✉️ export@nooh-produce.com</li>
+            <li class="footer-link">🌐 www.nooh-produce.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 NOOH Agriculture & Food Processing S.A.E. All Rights Reserved.</div>
+        <div class="footer-creator">
+          Created by <a href="https://wa.me/201026696759?text=مرحباً%20باسم،%20شاهدت%20موقع%20NOOH" target="_blank" class="creator-name" title="Contact Developer Basem Ebead on WhatsApp">Basem Ebead (01026696759)</a>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Export Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       PRODUCT DETAILS LIGHTBOX MODAL
+       ============================================= -->
+  <div id="product-modal" class="product-modal" role="dialog" aria-modal="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- =============================================
+       TOAST NOTIFICATION
+       ============================================= -->
+  <div id="toast-notification" class="toast-notification">
+    <div class="toast-icon">✅</div>
+    <div>
+      <div class="toast-title">Inquiry Submitted!</div>
+      <div class="toast-sub">Our export team will contact you within 2 hours.</div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/201090283194?text=مرحباً%20شركة%20NOOH،%20أرغب%20في%20الاستفسار%20عن%20منتجاتكم" target="_blank" class="whatsapp-float-btn" aria-label="Chat on WhatsApp">
+    <span class="whatsapp-icon">💬</span>
+    <span class="whatsapp-text">تواصل واتساب (01090283194)</span>
+  </a>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    function filterProductsViaNav(cat) {
+      const btn = document.querySelector(`.product-filter-btn[data-filter="${cat}"]`);
+      if (btn) btn.click();
+    }
+  </script>
+</body>
+</html>
