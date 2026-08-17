@@ -427,11 +427,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     img.addEventListener('error', function() {
+      if (!this.dataset.hasRetried) {
+        this.dataset.hasRetried = 'true';
+        let src = this.getAttribute('src') || '';
+        if (src.startsWith('images/')) {
+          this.src = src.replace('images/', '');
+          return;
+        } else if (!src.includes('/') && !src.startsWith('data:')) {
+          this.src = 'images/' + src;
+          return;
+        }
+      }
       if (this.dataset.hasFailed) return;
       this.dataset.hasFailed = 'true';
       this.src = createFallbackSVG(this.alt || this.getAttribute('data-fallback-title'));
       markLoaded();
-    }, { once: true });
+    });
   }
 
   window.handleNoohImage = handleNoohImage;
