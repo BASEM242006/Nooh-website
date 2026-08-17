@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grapes: {
       name: "IQF Seedless Grapes",
       category: "Frozen Fruits",
-      image: "https://images.unsplash.com/photo-1596368708356-6e1e1025ee72?auto=format&fit=crop&w=800&q=80",
+      image: "images/product_grapes.svg",
       description: "Crisp, naturally sweet seedless green and red grapes washed, stemmed, and individually quick frozen for premium snack applications and fruit processing.",
       specs: [
         { label: "Variety", value: "Thompson Seedless, Crimson" },
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sweetcorn: {
       name: "IQF Golden Sweet Corn",
       category: "Frozen Vegetables",
-      image: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=800&q=80",
+      image: "images/product_sweetcorn.svg",
       description: "Non-GMO golden sweet corn kernels harvested at peak sugar conversion, steam blanched, and quick frozen to lock in natural golden color and sweet snap.",
       specs: [
         { label: "Variety", value: "Super Sweet Golden Yellow" },
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mixedfruits: {
       name: "Gourmet Frozen Fruit Mix",
       category: "Fruit Mix",
-      image: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=800&q=80",
+      image: "images/product_mixedfruits.svg",
       description: "A chef-crafted blend of IQF strawberries, mango cubes, sliced peaches, and whole blueberries. Perfect balance of colors, textures, and tropical flavors.",
       specs: [
         { label: "Composition", value: "Strawberry (30%), Mango (30%), Peach (20%), Blueberry (20%)" },
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mixedveg: {
       name: "4-Way Gourmet Vegetable Mix",
       category: "Vegetable Mix",
-      image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+      image: "images/product_mixedveg.svg",
       description: "Steam-blanched garden peas, sweet corn kernels, diced carrots, and broccoli florets. Bright colors and farm-fresh taste ready for boiling, steaming, or stir-fry.",
       specs: [
         { label: "Composition", value: "Green Peas (30%), Sweet Corn (25%), Diced Carrots (25%), Broccoli (20%)" },
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalBody.innerHTML = `
       <div class="modal-grid">
         <div class="modal-img-col">
-          <img src="${data.image}" alt="${data.name}" class="modal-product-img" />
+          <img src="${data.image}" alt="${data.name}" class="modal-product-img" loading="eager" decoding="async" />
           <div class="modal-badge-tag">${data.category}</div>
         </div>
         <div class="modal-info-col">
@@ -292,6 +292,12 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     `;
+
+    // Ensure modal image is processed by image loader
+    const modalImg = modalBody.querySelector('.modal-product-img');
+    if (modalImg && typeof window.handleNoohImage === 'function') {
+      window.handleNoohImage(modalImg);
+    }
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -375,6 +381,63 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 800);
     });
   }
+
+  /* ── Robust Image Loading & Error Fallback System ── */
+  function createFallbackSVG(title) {
+    const cleanTitle = (title || 'NOOH Premium Export Product').replace(/[<>&"]/g, '');
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+      <defs>
+        <linearGradient id="fbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0a3d20" />
+          <stop offset="100%" stop-color="#155d32" />
+        </linearGradient>
+        <radialGradient id="fbGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#27a85f" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#0a3d20" stop-opacity="0" />
+        </radialGradient>
+        <filter id="fbShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.5" />
+        </filter>
+      </defs>
+      <rect width="800" height="600" fill="url(#fbBg)" />
+      <circle cx="400" cy="270" r="220" fill="url(#fbGlow)" />
+      <g filter="url(#fbShadow)" transform="translate(400, 250)">
+        <circle cx="0" cy="0" r="70" fill="rgba(255,255,255,0.08)" stroke="#e8960a" stroke-width="3" />
+        <text x="0" y="24" font-size="64" text-anchor="middle">❄️</text>
+      </g>
+      <rect x="180" y="470" width="440" height="54" rx="27" fill="rgba(10,30,18,0.92)" stroke="#e8960a" stroke-width="2" />
+      <text x="400" y="505" font-family="'Inter', system-ui, sans-serif" font-size="19" font-weight="bold" fill="#ffffff" text-anchor="middle">${cleanTitle}</text>
+    </svg>`;
+    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  }
+
+  function handleNoohImage(img) {
+    if (!img) return;
+
+    const markLoaded = () => {
+      img.classList.add('loaded');
+      const parent = img.closest('.product-img-wrap, .about-image-wrap, .why-image-col, .ff-image-col, .modal-img-col');
+      if (parent) parent.classList.add('loaded');
+    };
+
+    if (img.complete && img.naturalWidth !== 0) {
+      markLoaded();
+    } else {
+      img.addEventListener('load', markLoaded, { once: true });
+    }
+
+    img.addEventListener('error', function() {
+      if (this.dataset.hasFailed) return;
+      this.dataset.hasFailed = 'true';
+      this.src = createFallbackSVG(this.alt || this.getAttribute('data-fallback-title'));
+      markLoaded();
+    }, { once: true });
+  }
+
+  window.handleNoohImage = handleNoohImage;
+
+  // Process all existing images
+  document.querySelectorAll('img').forEach(handleNoohImage);
 
   updateActiveNav();
 });
