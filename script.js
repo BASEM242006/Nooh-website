@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     grapes: {
       name: "IQF Seedless Grapes",
       category: "Frozen Fruits",
-      image: "images/product_grapes.svg",
+      image: "images/product_grapes.png",
       description: "Crisp, naturally sweet seedless green and red grapes washed, stemmed, and individually quick frozen for premium snack applications and fruit processing.",
       specs: [
         { label: "Variety", value: "Thompson Seedless, Crimson" },
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sweetcorn: {
       name: "IQF Golden Sweet Corn",
       category: "Frozen Vegetables",
-      image: "images/product_sweetcorn.svg",
+      image: "images/product_sweetcorn.png",
       description: "Non-GMO golden sweet corn kernels harvested at peak sugar conversion, steam blanched, and quick frozen to lock in natural golden color and sweet snap.",
       specs: [
         { label: "Variety", value: "Super Sweet Golden Yellow" },
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mixedfruits: {
       name: "Gourmet Frozen Fruit Mix",
       category: "Fruit Mix",
-      image: "images/product_mixedfruits.svg",
+      image: "images/product_mixedfruits.png",
       description: "A chef-crafted blend of IQF strawberries, mango cubes, sliced peaches, and whole blueberries. Perfect balance of colors, textures, and tropical flavors.",
       specs: [
         { label: "Composition", value: "Strawberry (30%), Mango (30%), Peach (20%), Blueberry (20%)" },
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mixedveg: {
       name: "4-Way Gourmet Vegetable Mix",
       category: "Vegetable Mix",
-      image: "images/product_mixedveg.svg",
+      image: "images/product_mixedveg.png",
       description: "Steam-blanched garden peas, sweet corn kernels, diced carrots, and broccoli florets. Bright colors and farm-fresh taste ready for boiling, steaming, or stir-fry.",
       specs: [
         { label: "Composition", value: "Green Peas (30%), Sweet Corn (25%), Diced Carrots (25%), Broccoli (20%)" },
