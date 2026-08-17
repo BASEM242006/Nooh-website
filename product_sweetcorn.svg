@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCorn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b4d2e" />
+      <stop offset="100%" stop-color="#0a2e19" />
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5b830" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0a2e19" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="kernelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffeb3b" />
+      <stop offset="100%" stop-color="#f57f17" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgCorn)" />
+  <circle cx="400" cy="290" r="250" fill="url(#goldGlow)" />
+
+  <!-- Corn Cob & Kernels Graphic -->
+  <g filter="url(#shadow)" transform="translate(400, 270)">
+    <!-- Husk -->
+    <path d="M -140 100 Q -160 -40 -60 -180 Q -10 -40 -40 120 Z" fill="#388e3c" opacity="0.9" />
+    <path d="M 140 100 Q 160 -40 60 -180 Q 10 -40 40 120 Z" fill="#2e7d32" opacity="0.9" />
+
+    <!-- Cob Body Base -->
+    <rect x="-65" y="-150" width="130" height="280" rx="65" fill="#f5a623" />
+
+    <!-- Kernels Grid -->
+    <g fill="url(#kernelGrad)" stroke="#e65100" stroke-width="1">
+      <!-- Row -4 -->
+      <circle cx="-30" cy="-120" r="14" /><circle cx="0" cy="-120" r="14" /><circle cx="30" cy="-120" r="14" />
+      <!-- Row -3 -->
+      <circle cx="-42" cy="-85" r="15" /><circle cx="-14" cy="-85" r="15" /><circle cx="14" cy="-85" r="15" /><circle cx="42" cy="-85" r="15" />
+      <!-- Row -2 -->
+      <circle cx="-45" cy="-50" r="15" /><circle cx="-15" cy="-50" r="15" /><circle cx="15" cy="-50" r="15" /><circle cx="45" cy="-50" r="15" />
+      <!-- Row -1 -->
+      <circle cx="-45" cy="-15" r="15" /><circle cx="-15" cy="-15" r="15" /><circle cx="15" cy="-15" r="15" /><circle cx="45" cy="-15" r="15" />
+      <!-- Row 0 -->
+      <circle cx="-45" cy="20" r="15" /><circle cx="-15" cy="20" r="15" /><circle cx="15" cy="20" r="15" /><circle cx="45" cy="20" r="15" />
+      <!-- Row 1 -->
+      <circle cx="-42" cy="55" r="15" /><circle cx="-14" cy="55" r="15" /><circle cx="14" cy="55" r="15" /><circle cx="42" cy="55" r="15" />
+      <!-- Row 2 -->
+      <circle cx="-30" cy="90" r="14" /><circle cx="0" cy="90" r="14" /><circle cx="30" cy="90" r="14" />
+    </g>
+
+    <!-- Scattered Loose IQF Kernels -->
+    <g fill="url(#kernelGrad)" stroke="#f57f17" stroke-width="1.5">
+      <circle cx="-140" cy="40" r="16" transform="rotate(15)" />
+      <circle cx="-110" cy="90" r="18" />
+      <circle cx="120" cy="60" r="17" />
+      <circle cx="150" cy="110" r="15" />
+      <!-- Frost dots -->
+      <circle cx="-13" cy="-87" r="3" fill="#fff" />
+      <circle cx="16" cy="-52" r="3" fill="#fff" />
+      <circle cx="-16" cy="18" r="3" fill="#fff" />
+      <circle cx="14" cy="53" r="3" fill="#fff" />
+    </g>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="230" y="490" width="340" height="54" rx="27" fill="rgba(10,30,18,0.85)" stroke="#f5b830" stroke-width="2" />
+  <text x="400" y="525" font-family="'Inter', system-ui, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">IQF Golden Sweet Corn</text>
+</svg>

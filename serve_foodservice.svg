@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHoreca" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#072b15" />
+      <stop offset="60%" stop-color="#114a27" />
+      <stop offset="100%" stop-color="#1e8048" />
+    </linearGradient>
+    <radialGradient id="glowHoreca" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#27a85f" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#072b15" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="goldPlate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5b830" />
+      <stop offset="100%" stop-color="#e8960a" />
+    </linearGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgHoreca)" />
+  <circle cx="400" cy="220" r="280" fill="url(#glowHoreca)" />
+
+  <!-- Subtle Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1" fill="none">
+    <circle cx="120" cy="100" r="60" />
+    <circle cx="680" cy="380" r="90" />
+    <circle cx="720" cy="120" r="45" />
+    <path d="M 0 250 Q 200 200 400 250 T 800 250" />
+  </g>
+
+  <!-- Central Card Composition -->
+  <g filter="url(#dropShadow)" transform="translate(400, 205)">
+    <!-- Plate base -->
+    <ellipse cx="0" cy="40" rx="190" ry="60" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="2" />
+    
+    <!-- Main Gourmet Cloche / Chef Symbol Base -->
+    <rect x="-110" y="-85" width="220" height="135" rx="20" fill="rgba(10,45,22,0.85)" stroke="url(#goldPlate)" stroke-width="2.5" />
+    
+    <!-- Chef Icon -->
+    <text x="0" y="-15" font-size="62" text-anchor="middle">👨‍🍳</text>
+    
+    <!-- Badge inside -->
+    <rect x="-85" y="10" width="170" height="28" rx="14" fill="url(#goldPlate)" />
+    <text x="0" y="29" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="800" fill="#0a3d20" text-anchor="middle" letter-spacing="1.5">HORECA &amp; CHEFS</text>
+
+    <!-- Side Elements -->
+    <g transform="translate(-135, -20)">
+      <circle cx="0" cy="0" r="32" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+      <text x="0" y="10" font-size="28" text-anchor="middle">🍓</text>
+    </g>
+    <g transform="translate(135, -20)">
+      <circle cx="0" cy="0" r="32" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+      <text x="0" y="10" font-size="28" text-anchor="middle">🥭</text>
+    </g>
+  </g>
+
+  <!-- Bottom Title Tag -->
+  <g transform="translate(400, 420)">
+    <rect x="-190" y="-24" width="380" height="48" rx="24" fill="rgba(10,35,18,0.92)" stroke="url(#goldPlate)" stroke-width="1.5" />
+    <text x="0" y="7" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.8">Food Service &amp; HORECA Bulk</text>
+  </g>
+</svg>
